@@ -1,46 +1,90 @@
-// =========================
-// Bread-Bean Bakery JS
-// =========================
+// ========================
+// Bread-Bean Cart System
+// ========================
 
-// Log when site loads
-console.log("Bread-Bean Bakery Website Loaded Successfully");
+let cart = [];
+let total = 0;
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+// Add products to cart
+function addToCart(productName, price) {
 
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+    cart.push({
+        name: productName,
+        price: price
     });
-});
 
-// Simple form validation message (contact page)
-const form = document.querySelector("form");
+    total += price;
 
-if (form) {
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    displayCart();
 
-        alert("Thank you! Your message has been sent to Bread-Bean Bakery 🍞");
-
-        form.reset();
-    });
+    alert(productName + " added to cart!");
 }
 
-// Scroll effect for navbar (adds slight shadow on scroll)
-window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
+// Display cart items
+function displayCart() {
 
-    if (navbar) {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
-        } else {
-            navbar.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
-        }
+    const cartItems = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    cartItems.innerHTML = "";
+
+    cart.forEach((item, index) => {
+
+        let li = document.createElement("li");
+
+        li.classList.add(
+            "list-group-item",
+            "d-flex",
+            "justify-content-between",
+            "align-items-center"
+        );
+
+        li.innerHTML = `
+            ${item.name} - P${item.price}
+
+            <button class="btn btn-sm btn-danger"
+                onclick="removeItem(${index})">
+                Remove
+            </button>
+        `;
+
+        cartItems.appendChild(li);
+    });
+
+    cartTotal.textContent = total;
+}
+
+// Remove product
+function removeItem(index) {
+
+    total -= cart[index].price;
+
+    cart.splice(index, 1);
+
+    displayCart();
+}
+
+// Checkout function
+function checkout() {
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty!");
+
+    } else {
+
+        alert(
+            "Order placed successfully!\\n" +
+            "Total Amount: P" + total +
+            "\\nThank you for shopping at Bread-Bean Bakery!"
+        );
+
+        cart = [];
+        total = 0;
+
+        displayCart();
     }
-});
+}
+
+// Console message
+console.log("Bread-Bean Bakery Website Loaded");
