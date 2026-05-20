@@ -99,4 +99,20 @@ input, textarea {
     .hero-section h1 {
         font-size: 2rem;
     }
+
+
+}
+/* CART SECTION */
+
+.cart-box {
+    border-radius: 12px;
+}
+
+.cart-box h2 {
+    color: #6b3e26;
+}
+
+.list-group-item {
+    border-radius: 8px !important;
+    margin-bottom: 10px;
 }
