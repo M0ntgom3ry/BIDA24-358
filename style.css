@@ -116,3 +116,31 @@ input, textarea {
     border-radius: 8px !important;
     margin-bottom: 10px;
 }
+
+/* CONTACT PAGE */
+
+.contact-hero {
+    background: linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('../images/bakery.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    height: 50vh;
+}
+
+.contact-form-box,
+.contact-info-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.social-links a {
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
