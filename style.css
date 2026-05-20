@@ -1,0 +1,102 @@
+/* =========================
+   Bread-Bean Bakery Styles
+========================= */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffaf5;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #d48c45 !important;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Buttons */
+.btn-warning {
+    background-color: #d48c45;
+    border: none;
+}
+
+.btn-warning:hover {
+    background-color: #b87333;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: #6b3e26;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Images inside cards */
+.card img {
+    object-fit: cover;
+}
+
+/* Sections spacing */
+section {
+    padding: 60px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Forms */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+input, textarea {
+    border-radius: 8px !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
