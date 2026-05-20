@@ -1,202 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Bread-Bean</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bread-Bean Bakery | Blog</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #fffaf3;
+        }
+
+        .blog-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-title {
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- NAVIGATION -->
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
+        <a class="navbar-brand" href="index.html">Bread-Bean Bakery</a>
 
-        <!-- LOGO -->
-
-        <a class="navbar-brand fw-bold"
-           href="index.html">
-
-            Bread-Bean
-
-        </a>
-
-        <!-- MOBILE TOGGLE -->
-
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
-        <!-- NAV LINKS -->
-
-        <div class="collapse navbar-collapse"
-             id="navbarNav">
-
+        <div class="collapse navbar-collapse" id="nav">
             <ul class="navbar-nav ms-auto">
 
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="about.html">
-                        About
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="products.html">
-                        Products
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="gallery.html">
-                        Gallery
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="services.html">
-                        Services
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="blog.html">
-                        Blog
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="contact.html">
-                        Contact
-                    </a>
-                </li>
-
-                <!-- CART LINK -->
-
-                <li class="nav-item">
-                    <a class="nav-link cart-nav"
-                       href="products.html">
-
-                        🛒 Cart
-
-                    </a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
             </ul>
         </div>
     </div>
 </nav>
-  
+
+<!-- BLOG HEADER -->
 <div class="container py-5">
-<h1 class="text-center mb-5">Bakery Blog</h1>
+    <h1 class="text-center mb-2">Bakery Blog</h1>
+    <p class="text-center text-muted mb-5">
+        Tips, recipes, and stories from Bread-Bean Bakery
+    </p>
 
-<div class="card mb-4 shadow-sm">
-<div class="card-body">
-<h3>5 Tips for Keeping Bread Fresh</h3>
-<p>
-Store bread in a cool dry place and avoid refrigeration for better texture and flavor.
-</p>
-</div>
-</div>
+    <!-- BLOG POSTS -->
+    <div class="row g-4">
 
-<div class="card mb-4 shadow-sm">
-<div class="card-body">
-<h3>How We Make Our Signature Cakes</h3>
-<p>
-Our cakes are made with premium ingredients and decorated carefully by our bakers.
-</p>
-</div>
-</div>
-
-</div>
-
-<!-- FOOTER -->
-
-<footer class="footer-section">
-
-    <div class="container">
-
-        <div class="row">
-
-            <!-- BRAND -->
-
-            <div class="col-md-4 mb-4">
-
-                <h3>Bread-Bean</h3>
-
-                <p>
-                    Freshly baked happiness every day.
-                    From artisan breads to premium cakes.
-                </p>
-
+        <!-- Post 1 -->
+        <div class="col-md-4">
+            <div class="card blog-card shadow-sm h-100">
+                <img src="baking.jpg" class="card-img-top" alt="Fresh Baking">
+                <div class="card-body">
+                    <h5 class="blog-title">Fresh Bread Every Morning</h5>
+                    <p>
+                        Learn how we prepare our bread daily using fresh ingredients
+                        to ensure quality and taste.
+                    </p>
+                    <a href="#" class="btn btn-outline-dark btn-sm">Read More</a>
+                </div>
             </div>
-
-            <!-- QUICK LINKS -->
-
-            <div class="col-md-4 mb-4">
-
-                <h4>Quick Links</h4>
-
-                <ul class="footer-links">
-
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-
-                </ul>
-
-            </div>
-
-            <!-- CONTACT -->
-
-            <div class="col-md-4 mb-4">
-
-                <h4>Contact</h4>
-
-                <p>📍 Gaborone, Botswana</p>
-                <p>📞 +267 78112413</p>
-                <p>✉ trhnthaga@gmail.com</p>
-
-            </div>
-
         </div>
 
-        <hr class="bg-light">
+        <!-- Post 2 -->
+        <div class="col-md-4">
+            <div class="card blog-card shadow-sm h-100">
+                <img src="cookies.jpg" class="card-img-top" alt="Cookies">
+                <div class="card-body">
+                    <h5 class="blog-title">Secret to Perfect Cookies</h5>
+                    <p>
+                        Discover the techniques we use to make soft, chewy, and delicious
+                        chocolate chip cookies.
+                    </p>
+                    <a href="#" class="btn btn-outline-dark btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
 
-        <div class="text-center">
+        <!-- Post 3 -->
+        <div class="col-md-4">
+            <div class="card blog-card shadow-sm h-100">
+                <img src="cake-decorating.jpg" class="card-img-top" alt="Cake Decorating">
+                <div class="card-body">
+                    <h5 class="blog-title">Cake Decorating Ideas</h5>
+                    <p>
+                        Simple and creative cake decoration ideas for birthdays and
+                        special events.
+                    </p>
+                    <a href="#" class="btn btn-outline-dark btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
 
-            <p>
-                © 2026 Bread-Bean Bakery.
-                All Rights Reserved.
-            </p>
+        <!-- Post 4 -->
+        <div class="col-md-4">
+            <div class="card blog-card shadow-sm h-100">
+                <img src="bakery-shop.jpg" class="card-img-top" alt="Bakery Shop">
+                <div class="card-body">
+                    <h5 class="blog-title">Our Bakery Journey</h5>
+                    <p>
+                        How Bread-Bean Bakery started from a small kitchen and grew
+                        into a local favorite.
+                    </p>
+                    <a href="#" class="btn btn-outline-dark btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
 
+        <!-- Post 5 -->
+        <div class="col-md-4">
+            <div class="card blog-card shadow-sm h-100">
+                <img src="bread-types.jpg" class="card-img-top" alt="Types of Bread">
+                <div class="card-body">
+                    <h5 class="blog-title">Different Types of Bread</h5>
+                    <p>
+                        Learn about sourdough, baguettes, and whole grain bread and
+                        what makes each unique.
+                    </p>
+                    <a href="#" class="btn btn-outline-dark btn-sm">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 6 -->
+        <div class="col-md-4">
+            <div class="card blog-card shadow-sm h-100">
+                <img src="cupcakes.jpg" class="card-img-top" alt="Cupcakes">
+                <div class="card-body">
+                    <h5 class="blog-title">Cupcake Decorating Tips</h5>
+                    <p>
+                        Easy tips to make your cupcakes look professional and
+                        bakery-quality at home.
+                    </p>
+                    <a href="#" class="btn btn-outline-dark btn-sm">Read More</a>
+                </div>
+            </div>
         </div>
 
     </div>
+</div>
 
-</footer>
-  
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
